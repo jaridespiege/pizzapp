@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Make your pizza</h1>
+  <ion-item>
+      <ion-input placeholder="Name your pizza"></ion-input>
+      
+    </ion-item>
+  <ion-item>
+      <ion-label>Extra cheese</ion-label>
+      <ion-toggle value="Extra cheese" checked></ion-toggle>
+    </ion-item>
+  <h2>toppings</h2>
+  <ion-list radio-group [(ngModel)]="relationship">
+    
+    <ion-item>
+      <ion-label>Pepperoni</ion-label>
+      <ion-radio value="Pepperoni" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sausage</ion-label>
+      <ion-radio value="Sausage"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mushrooms</ion-label>
+      <ion-radio value="Mushrooms" [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button ion-button full (click)="about()">Add to cart
+
+  </button>
+</ion-content>
